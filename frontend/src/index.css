@@ -1,0 +1,157 @@
+@import url('https://fonts.google.com/specimen/Bebas+Neue');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Black & Blue-Grey Palette */
+    --background: 210 100% 2%;      /* #000000 */
+    --foreground: 210 10% 85%;      /* #d1d5db (light blue-grey for text) */
+
+    --card: 210 100% 6%;            /* #0a151b */
+    --card-foreground: 210 10% 85%;
+
+    --popover: 210 100% 8%;         /* #101e26 */
+    --popover-foreground: 210 10% 85%;
+
+    --primary: 210 100% 12%;        /* #14232d */
+    --primary-foreground: 210 10% 85%;
+
+    --secondary: 210 25% 30%;       /* #374751 */
+    --secondary-foreground: 210 10% 85%;
+
+    --muted: 210 15% 40%;           /* #4b5c66 */
+    --muted-foreground: 210 10% 70%;
+
+    --accent: 210 10% 50%;          /* #64727a */
+    --accent-foreground: 210 10% 95%;
+
+    --destructive: 0 84% 60%;       /* Red for destructive */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 20%;          /* #232f36 */
+    --input: 210 15% 12%;           /* #151e23 */
+    --ring: 210 100% 12%;           /* #14232d */
+
+    --upvote: 160 100% 35%;         /* Vibrant green for upvote */
+    --downvote: 0 100% 50%;         /* Vibrant red for downvote */
+    --credible: 210 25% 30%;        /* #374751 */
+
+    --gradient-primary: linear-gradient(135deg, #000000 0%, #374751 100%);
+    --gradient-accent: linear-gradient(180deg, #000000 0%, #232f36 100%);
+
+    --shadow-elegant: 0 4px 20px #14232d33;
+    --shadow-card: 0 2px 8px #0000004d;
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 100% 6%;      /* #0a151b */
+    --sidebar-foreground: 210 10% 85%;
+    --sidebar-primary: 210 100% 12%;        /* #14232d */
+    --sidebar-primary-foreground: 210 10% 85%;
+    --sidebar-accent: 210 25% 30%;          /* #374751 */
+    --sidebar-accent-foreground: 210 10% 95%;
+    --sidebar-border: 210 15% 20%;          /* #232f36 */
+    --sidebar-ring: 210 100% 12%;           /* #14232d */
+  }
+
+  /* Remove light mode - always use dark theme */
+  .dark {
+    /* Same as root - forces dark mode always */
+    --background: 210 100% 2%;
+    --foreground: 210 10% 85%;
+    --card: 210 100% 6%;
+    --card-foreground: 210 10% 85%;
+    --popover: 210 100% 8%;
+    --popover-foreground: 210 10% 85%;
+    --primary: 210 100% 12%;
+    --primary-foreground: 210 10% 85%;
+    --secondary: 210 25% 30%;
+    --secondary-foreground: 210 10% 85%;
+    --muted: 210 15% 40%;
+    --muted-foreground: 210 10% 70%;
+    --accent: 210 10% 50%;
+    --accent-foreground: 210 10% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 15% 20%;
+    --input: 210 15% 12%;
+    --ring: 210 100% 12%;
+    --sidebar-background: 210 100% 6%;
+    --sidebar-foreground: 210 10% 85%;
+    --sidebar-primary: 210 100% 12%;
+    --sidebar-primary-foreground: 210 10% 85%;
+    --sidebar-accent: 210 25% 30%;
+    --sidebar-accent-foreground: 210 10% 95%;
+    --sidebar-border: 210 15% 20%;
+    --sidebar-ring: 210 100% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      linear-gradient(135deg, #000000 0%, #232f36 100%),
+      url('./assets/download.jpeg');
+    background-repeat: repeat;
+    background-size: cover, auto;
+    background-blend-mode: overlay;
+  }
+
+  /* Force dark mode always */
+  html {
+    @apply dark;
+  }
+}
+
+.neon-senyour {
+  font-family:'Bebas Neue', sans-serif;
+  color: #e6f0f3; /* light blue-grey */
+  text-shadow:
+    0 0 8px #e6f0f3,
+    0 0 16px #7fd6ff,
+    0 0 32px #7fd6ff,
+    0 0 48px #7fd6ff;
+  font-weight: bold;
+  letter-spacing: 0.1px;
+}
+
+.thread-card {
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.thread-card:hover .thread-title,
+.thread-card:focus-within .thread-title {
+  color: #e6f0f3; /* Lighter blue-grey */
+  text-shadow:
+    0 0 8px #e6f0f3,
+    0 0 16px #7fd6ff,
+    0 0 32px #7fd6ff;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.thread-card:hover,
+.thread-card:focus-within {
+  background: rgba(230, 240, 243, 0.04); /* subtle light overlay */
+  box-shadow: 0 0 24px 2px #7fd6ff33;
+}
+
+/* Example HTML structure:
+<div class="thread-card">
+  <h2 class="thread-title">...</h2>
+  ...
+</div>
+*/

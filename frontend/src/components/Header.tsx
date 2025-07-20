@@ -16,7 +16,7 @@ const Header = () => {
             <GraduationCap className="h-5 w-5 text-primary-foreground" />
           </div>
           <div className="hidden font-bold sm:inline-block">
-            <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            <span className="neon-senyour bg-gradient-to-r from-[#e6f0f3] to-[#7fd6ff] bg-clip-text text-transparent">
               SENYOUR
             </span>
           </div>
