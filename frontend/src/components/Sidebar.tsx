@@ -54,7 +54,7 @@ const Sidebar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <aside className="w-64 h-[calc(100vh-4rem)] overflow-y-auto border-r bg-card/50 backdrop-blur-sm">
+    <aside className="w-64 h-[calc(100vh-4rem)] overflow-y-auto border-r glass backdrop-blur-xl">
       <div className="p-4 space-y-6">
         
         {/* Main Navigation */}
@@ -136,12 +136,12 @@ const Sidebar = () => {
         </Collapsible>
 
         {/* Quick Stats */}
-        <div className="p-3 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg border">
+        <div className="p-3 glass-card rounded-lg neon-glow">
           <h4 className="font-medium text-sm mb-2">Today's Activity</h4>
           <div className="space-y-1 text-xs text-muted-foreground">
             <div className="flex justify-between">
               <span>New Questions</span>
-              <span className="font-medium text-primary">23</span>
+              <span className="font-medium text-primary neon-text">23</span>
             </div>
             <div className="flex justify-between">
               <span>Resources Shared</span>

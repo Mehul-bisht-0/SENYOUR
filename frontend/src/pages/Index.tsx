@@ -102,7 +102,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent/5">
+    <div className="min-h-screen ambient-light">
       <Header />
       
       <div className="flex">
@@ -110,14 +110,14 @@ const Index = () => {
         
         <main className="flex-1 p-6 max-w-4xl">
           {/* Welcome Banner */}
-          <div className="mb-6 p-6 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent rounded-xl border border-primary/20">
+          <div className="mb-6 p-6 glass-card rounded-xl neon-glow">
             <h1 className="text-2xl font-bold mb-2">
-              Welcome to <span className="text-primary">SENYOUR Connect</span>
+              Welcome to <span className="text-primary neon-text">SENYOUR Connect</span>
             </h1>
             <p className="text-muted-foreground mb-4">
               Connect with seniors, share knowledge, and grow together. Ask questions, share resources, and build your academic network.
             </p>
-            <Button onClick={() => setShowQuestionForm(true)} className="shadow-md">
+            <Button onClick={() => setShowQuestionForm(true)} className="shadow-md neon-glow">
               <Plus className="mr-2 h-4 w-4" />
               Ask Your First Question
             </Button>
@@ -193,28 +193,28 @@ const Index = () => {
         <aside className="w-72 p-6 space-y-6">
           <div className="sticky top-24 space-y-6">
             {/* Quick Actions */}
-            <div className="p-4 bg-card rounded-lg border shadow-sm">
+            <div className="p-4 glass-card rounded-lg neon-glow">
               <h3 className="font-semibold mb-3">Quick Actions</h3>
               <div className="space-y-2">
                 <Button 
                   variant="outline" 
-                  className="w-full justify-start"
+                  className="w-full justify-start neon-glow"
                   onClick={() => setShowQuestionForm(true)}
                 >
                   <Plus className="mr-2 h-4 w-4" />
                   Ask Question
                 </Button>
-                <Button variant="outline" className="w-full justify-start">
+                <Button variant="outline" className="w-full justify-start neon-glow">
                   Share Resource
                 </Button>
-                <Button variant="outline" className="w-full justify-start">
+                <Button variant="outline" className="w-full justify-start neon-glow">
                   Find Study Group
                 </Button>
               </div>
             </div>
 
             {/* Top Contributors */}
-            <div className="p-4 bg-card rounded-lg border shadow-sm">
+            <div className="p-4 glass-card rounded-lg neon-glow">
               <h3 className="font-semibold mb-3">Top Contributors</h3>
               <div className="space-y-3">
                 {[
@@ -227,7 +227,7 @@ const Index = () => {
                       <p className="font-medium text-sm">{contributor.name}</p>
                       <p className="text-xs text-muted-foreground">{contributor.branch}</p>
                     </div>
-                    <Badge variant="outline" className="text-credible border-credible">
+                    <Badge variant="outline" className="text-credible border-credible neon-glow">
                       {contributor.points} pts
                     </Badge>
                   </div>
