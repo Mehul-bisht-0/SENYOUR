@@ -58,7 +58,7 @@ const DiscussionThread = ({
   };
 
   return (
-    <Card className={cn("group hover:shadow-md transition-all duration-200 border-l-4", 
+    <Card className={cn("group glass-card neon-glow transition-all duration-200 border-l-4", 
       category === 'question' && "border-l-primary",
       category === 'resource' && "border-l-credible", 
       category === 'discussion' && "border-l-accent",
